@@ -13,7 +13,7 @@ services:
     image: "postgres:15"
     environment:
       POSTGRES_USER: "postgres"
-      POSTGRES_PASSWORD: "password"
+      POSTGRES_PASSWORD: "postgres"
       PGDATA: "/data/postgres"
     volumes:
        - postgres:/data/postgres
@@ -40,6 +40,6 @@ services:
     entrypoint:
       - "/bin/sh"
       - "-c"
-      - "/bin/echo 'postgres:5432:*:postgres:password' > /tmp/pgpassfile && chmod 600 /tmp/pgpassfile && /entrypoint.sh"
+      - "/bin/echo 'postgres:5432:*:postgres:postgres' > /tmp/pgpassfile && chmod 600 /tmp/pgpassfile && /entrypoint.sh"
     restart: unless-stopped
     
