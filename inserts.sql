@@ -1,3 +1,5 @@
+
+   \c books
 INSERT INTO book (author_id, name)
     VALUES 
     (2, 'The Name of Book'),

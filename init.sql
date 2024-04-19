@@ -1,3 +1,6 @@
+CREATE database books;
+   \c books
+
 CREATE TABLE book (
     id          SERIAL PRIMARY KEY,
     author_id   integer NOT NULL,
